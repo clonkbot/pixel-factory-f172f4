@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom animations */
+@keyframes conveyor {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pixel-build {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.animate-conveyor {
+  animation: conveyor 1.5s linear infinite;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out forwards;
+}
+
+.animate-pixel-build {
+  animation: pixel-build 0.5s ease-in-out infinite;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F0E8;
+  border: 2px solid #8B8B8B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8B8B8B;
+  border: 2px solid #F5F0E8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6B6B6B;
+}
+
+/* Selection color */
+::selection {
+  background: #BFFF00;
+  color: #8B8B8B;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 4px solid #BFFF00;
+  outline-offset: 2px;
+}
+
+/* Body base styles */
+body {
+  font-family: 'Space Mono', monospace;
+  background-color: #F5F0E8;
+  color: #8B8B8B;
+}
+
+/* Video element styling */
+video {
+  background-color: #8B8B8B;
+}
+
+/* Button press effect */
+button:active:not(:disabled) {
+  transform: translateY(2px);
+}
+
+/* Brutalist input focus */
+input:focus,
+textarea:focus {
+  box-shadow: 4px 4px 0 #8B8B8B;
+}
